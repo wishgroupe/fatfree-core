@@ -1716,7 +1716,7 @@ final class Base extends Prefab implements ArrayAccess {
 		}
 
 		// Check if the PATH contains only alphanumeric characters and slashes; if not, trigger a 404 error.
-		if (preg_replace('/[^a-zA-Z0-9\/-_]/', '', $this->hive['PATH']) !== $this->hive['PATH'])
+		if (preg_replace('/[^a-zA-Z0-9\/_-]/', '', $this->hive['PATH']) !== $this->hive['PATH'])
 			$this->error(404);
 	
 		$allowed=[];
